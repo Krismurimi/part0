@@ -1,0 +1,27 @@
+title Post New Note
+
+browser->server: HTTP POST user input is sent to the server
+note over server:
+The server recieves new note and updates 
+the json data to include new note
+end note
+server->browser: URL Redirect(server asks browser to reload the page)
+browser->server: HTTP GET browser reloads the page to get updated info
+server->browser: HTML Code
+browser->server: GET CSS Code
+server->browser: main.css
+browser->server: HTTP GET JavaScript
+server-->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET json
+server-->browser: [{ content: data, date: data }, ...]
+
+note over browser:
+browser executes the event handler
+that renders updated notes to display
+end note
