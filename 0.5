@@ -1,0 +1,18 @@
+browser->server: GET HTTP 
+server->browser: spa HTML Code
+browser->server: GET CSS Code
+server->browser: main.css
+browser->server: GET JavaScript Code
+server->browser: spa.js
+
+note over browser:
+the browser will begin to execute 
+the js code that requests json data
+end note
+
+browser->server: GET json data
+
+note over browser:
+spa.js will retrieve data from json data file 
+and display the data using javascript DOM manipulation
+end note
